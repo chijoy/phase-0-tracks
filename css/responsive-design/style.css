@@ -1,6 +1,9 @@
 body {
-  max-width: 960px;
+  width: 960px;
+  margin: auto;
+  width: 60%;
 }
+
 
 blockquote {
   border-left: 5px solid blue;
@@ -49,3 +52,23 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+
+@media screen and (max-width: 400px) {
+  body {
+    font-size: .8em;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  body {
+    font-family: Helvetica;
+  }
+}
+
+
+/*}
+@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+}*/
