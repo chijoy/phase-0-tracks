@@ -1,0 +1,27 @@
+h1 {
+  background-color: blue;
+}
+
+.column-1 {
+  background-color: pink;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 20%;
+  padding: 5% 10%;
+  border: 1px solid black;
+}
+
+.column-2 {
+  background-color: pink;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 20%;
+  padding: 5% 10%;
+  margin-left: 5%;
+  border: 1px solid black;
+}
+
+footer {
+  background-color: green;
+}
