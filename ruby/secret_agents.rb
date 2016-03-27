@@ -1,40 +1,89 @@
-# index = 0
-# encrypt = "abcd"
 
 
-# while index < encrypt.length
-#  p encrypt[index.next]
-#  index += 1
+# puts encrypt("abc")
+# puts encrypt("zed")
+# puts encrypt("The duck flies at midnight")
+# calls and tests method.
+
+# def decrypt(str)
+# # create a method that takes a string and moves it back one letter in the alphabet.
+#   index=0
+#   # create a variable that will represent the index of the string 
+#   alphabet="abcdefghijklmnopqrstuvwxyz"
+#   #define the alphabet as a variable..
+
+#   while index < str.length 
+#     # create a loop that will identify the end point to elimiate an infinite loop.
+#     str[index] = alphabet[alphabet.index(str[index])-1]
+#     # moves back one letter
+#     index += 1
+#     # moves to the next character in the index acting as a counter.
+#   end
+#   #end loop
+#   str
+#   #display result of string
 # end
+# # end method
 
-# index = 0
-# decrypt = "abcd"
-
-
-# while index < decrypt.length
-#  p decrypt[index]
-#  decrypt[-1]
-#  index += 1
-# end
+# puts decrypt("bcd")
+# puts decrypt("afe")
+# puts decrypt ("theduckfliesatmidnight")
+# puts decrypt(encrypt("theduckfliesatmidnight"))
+# calls method
+# This nested method does not work. We can individually encrypt and decrypt the message, but we can't do both and Googling nested methods we found that Ruby doesn't support nested methods.  
 
 
-# create an encrypt method that advances every letter of a string one letter forward
+puts "What do you want to do with your password? Encrypt or decrypt?"
+question = gets.chomp
+# asking a user what method do they want to use
 
-# INPUT: string
-# loop until condition is met, until 
-# OUTPUT: string that has advanced each letter forward one letter
-# Example input: abc, zed
-# Example output: bcd, afe
+puts "Type in your password"
+pass = gets.chomp
+# asking for the password
 
-index = 0
+if question == "encrypt" then
+# create an if statement asking which method the user wants 
+      def encrypt(str)
+    # define a method that moves a string forward one letter in the alphabet.
 
-def encrypt(letters)
-	puts letters.next
-	until encrypt.index(3)
-		puts index +1
-		
-	end
+      index = 0
+      # create a variable that will represent the index of the string.
+
+      while index < str.length
+        # create a loop that will identify the end point to eliminate an infinite loop.
+        puts str[index].next
+        # moves to the next letter.
+        index += 1
+        # moves to the next character in the index acting as a counter.
+
+      end
+      # end loop
+    end
+    # end method
+  puts encrypt(pass)
+
+  
+  elsif question == "decrypt" then
+# create an if statement asking which method the user wants
+    def decrypt(str)
+    # create a method that takes a string and moves it back one letter in the alphabet.
+      index=0
+      # create a variable that will represent the index of the string 
+      alphabet="abcdefghijklmnopqrstuvwxyz"
+      #define the alphabet as a variable..
+
+      while index < str.length 
+        # create a loop that will identify the end point to elimiate an infinite loop.
+        str[index] = alphabet[alphabet.index(str[index])-1]
+        # moves back one letter
+        index += 1
+        # moves to the next character in the index acting as a counter.
+      end
+      #end loop
+      str
+      #display result of string
+    end
+    # end method
+  puts decrypt(pass)
 end
-
-puts encrypt("abc")
-puts encrypt("zed")
+  
