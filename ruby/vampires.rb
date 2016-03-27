@@ -24,21 +24,14 @@ insurance = gets.chomp
 
 current_year = 2016
 age = current_year - year
-# #	puts "You are #{age} years old. Congratulations."
-# if age == old
-# #	puts "And you got it right."
-# 	else
-# #	puts "You are a big fat liar."
-# end
-
 
 # set up a parameter for if employee gets age right and is willing to eat garlic bread 
 # and sign up for insurance, not a vampire
 
 if age == old && garlic == "yes" && insurance == "yes"
 	puts "Probably not a vampire."
-else
-	puts "Vampire!"
+elsif age != old && garlic == "no" && insurance == "no"
+	puts "Probably a vampire."
 end
 
 
