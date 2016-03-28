@@ -27,13 +27,16 @@ while index < employees
 	insurance = gets.chomp.downcase
 	# p insurance
 
-	puts "Please name any allergies that you have, one at a time, then type "Done." If no allergies, just type "Done.""
+	puts "Please name any allergies that you have, one at a time, then type 'Done.'"
+	puts "If no allergies, just type 'Done.'"
 	allergies = gets.chomp.downcase
 
-	until allergies == "done"
-		puts "Please enter another allergy."
+# Ask employees if they have allergies, one at a time, until they type done, unless they type sunshine.
+	until allergies == "done" do
 		if allergies == "sunshine"
 			puts "Probably a vampire."
+		break
+		end
 	end
 
 
@@ -62,5 +65,6 @@ while index < employees
 	end
 end
 
+puts
 puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
 
