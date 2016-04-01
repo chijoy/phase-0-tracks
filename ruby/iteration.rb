@@ -20,3 +20,9 @@ desc = { "Joe" => "short", "Jim" => "tall", "Bob" => "skinny"}
 p desc
 
 desc.each {|name,key| puts "Here's the info: #{name} - #{key}"}
+
+numbers = [1,2,3]
+p numbers
+
+numbers.delete_at(2)
+  puts "Here are the new numbers: #{numbers}!"
