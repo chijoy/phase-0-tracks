@@ -4,6 +4,7 @@
 # When there's more than one suspect who could have
 # committed the crime, add additional calls to prove it.
 
+
 # “iNvEsTiGaTiOn”.swapcase
 # => “InVeStIgAtIoN”
 
@@ -51,11 +52,11 @@ puts
 # a = "the usual"
 # a << " suspects"
 
-def add_to_str(str,add)
+def add_to_end(str,add)
 	str << add
 end
 
-puts add_to_str("the usual ", "suspects")
+puts add_to_end("the usual ", "suspects")
 puts
 
 # #“ suspects”.<???>
@@ -63,6 +64,8 @@ puts
 
 # a = " suspects"
 # a.prepend("the usual")
+
+def add_to_beg()
 
 # “The case of the disappearing last letter”.chop
 # # => “The case of the disappearing last lette”
@@ -120,3 +123,6 @@ puts
 # end
 
 # puts count("How many times does the letter a appear in this string?")
+
+
+
