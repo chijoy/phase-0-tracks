@@ -50,4 +50,4 @@ numbers.keep_if {|number| number > 2 }
 
 # A method that will remove items until condition is false.
 numbers.drop_while {|number| number != 6 }
-  puts "Here are the new numbers: #{numbers}!"
+  puts "Here are the new numbers after condition false is met: #{numbers}!"
