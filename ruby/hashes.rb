@@ -10,16 +10,13 @@ puts
 
 # Ask user for their first name and capitalize.
 puts "Hello! What is your first name?"
-first_name = gets.chomp.capitalize
-client[:first_name] = first_name
+first = gets.chomp.capitalize
+client[:first] = first
 
 # Ask user for their last name and capitalize.
 puts "What is your last name?"
-last_name = gets.chomp.capitalize
-client[:last_name] = last_name
-
-# Combine first and last name for proper full name.
-full_name = first_name + " " + last_name
+last = gets.chomp.capitalize
+client[:last] = last
 
 # Ask user for their age and ensure integer.
 puts "What is your age?"
@@ -49,14 +46,6 @@ client[:money] = money
 		puts "Fine..."
 	end
 
-# New hash with money added.
-client = {
-	# first_name: full_name, 
-	# age: age, 
-	# children: children, 
-	# decor: decor,
-	# money: money
-}
 # confirm new hash
 puts
 p client
@@ -64,8 +53,8 @@ puts
 
 # Print out all information.
 puts
-puts "Your first name is #{first_name},"
-puts "Your last name is #{last_name}," 
+puts "Your first name is #{first},"
+puts "Your last name is #{last}," 
 puts "you are #{age} years old,"
 puts "you have #{children} children,"
 puts "you would like your decor theme to be #{decor},"
@@ -82,16 +71,16 @@ if reply == "yes"
 	puts "Thank you for providing us with your information."
 else
 	puts "What would you like to change?"
-	puts "Please enter first name, last name, age, or children."
-	change = gets.chomp.to_sym
-	if change == "first_name"
+	puts "Please enter first, last, age, children, or decor."
+	change = gets.chomp
+	if change == "first"
 		puts "Please enter your first name."
-		first_name = gets.chomp.capitalize
-		client[first_name] = first_name
-	elsif change == "last name"
+		first = gets.chomp.capitalize
+		client[first] = first
+	elsif change == "last"
 		puts "Please enter your last name."
 		last_name = gets.chomp.capitalize
-		client[last_name] = last_name
+		client[last] = last
 	elsif change == "age"
 		puts "Please enter your age."
 		age = gets.chomp.to_i
