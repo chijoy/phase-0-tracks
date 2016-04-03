@@ -11,18 +11,40 @@ building = {
 			"pastries",
 			"chocolate"
 		]
+	},
+	
+	retail_store: {
+		name: "Staples",
+		for_sale: [
+			"printers",
+			"paper",
+			"pens"
+		]
+	},
+	
+	clothing_store: {
+		name: "Nordstoms",
+		for_sale: [
+			"clothes",
+			"jewelry",
+			"shoes"
+		]
 	}
-	# retail_store: {
-	# 	name: "Staples",
-	# 	for_sale: [
-	# 		"printers",
-	# 		"paper",
-	# 		"pens"
-	# 	]
-	# }
-
 }
 
+
+# print individual pieces and types of access
+puts
 p building
-# p building[coffee_house]
-# p building[coffee_house][0]
+puts 
+p building[:coffee_house][:menu]
+puts
+p building[:retail_store][:name]
+puts
+p building[:retail_store][:for_sale][2]
+puts
+p building[:clothing_store][:for_sale][1]
+puts
+p building[:coffee_house][:menu].push("popcorn")
+puts
+p building[:clothing_store][:for_sale].reverse
