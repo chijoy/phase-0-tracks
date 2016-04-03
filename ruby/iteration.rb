@@ -1,4 +1,6 @@
-# declare an array per release 1, number 1.
+# Release #1
+
+# declare an array.
 
 names = [
   "Joe", 
@@ -15,43 +17,37 @@ modified_names = names.map do |name|
   name.next
 end
 
+# Show the modification
 puts "Here's the new names:"
 p names
 p modified_names
   
-# declase a hash, per release 1, number 1.
+# declase a hash.
 desc = { "Joe" => "short", "Jim" => "tall", "Bob" => "skinny"}
 p desc
 
 # Iterate through the hash using .each.
 desc.each {|name,key| puts "Here's the info: #{name} - #{key}"}
 
-numbers = [1,2,3]
+
+# Release 2
+
+# Define array of numbers.
+numbers = [1,2,3,4,5,6]
 p numbers
 
-# Iterate through the hash using .delete
+# Iterate through the array using .delete 
 numbers.delete_at(2)
-  puts "Here are the new numbers: #{numbers}!"
+  puts "Here are the new numbers without the index at 2: #{numbers}!"
 
-# Iterate through the hash 
+# Iterate through the array until a certain condition is met.
 numbers.delete_if {|number| number < 2 }
-  puts "Here are the numbers greater than 1: #{numbers}!"
+  puts "Here are the numbers without numbers less than 2: #{numbers}!"
 
-iron_content = {
-  'chickenLiver' => 11,
-  'oysters' => 6,
-  'beefLiver' => 5,
-  'beefGround' => 2,
-  'chicken' => 1,
-  'tuna' => 1,
-  'spinach' => 6,
-  'chard' => 4,
-  'cumin' => 3,
-  'amaranth' => 2,
-  'quinoa' => 1,
-}
-# p "Original list:"
-# p iron_content
+# A different method.
+numbers.keep_if {|number| number > 2 }
+  puts "Here are the numbers with numbers greater than 2: #{numbers}!"
 
-iron_content.fetch_values(2)
-puts "here are food with less 1mg #{iron_content}"
+# A method that will remove items until condition is false.
+numbers.drop_while {|number| number != 6 }
+  puts "Here are the new numbers after condition false is met: #{numbers}!"
