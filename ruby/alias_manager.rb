@@ -18,7 +18,7 @@ last_name = gets.chomp.downcase
 full_name = last_name + first_name
 p full_name
 
-p full_name.class
+# p full_name.class
 
 def if_vowel(str)
 	index = 0
@@ -38,89 +38,11 @@ def consonant(str)
 	end
 end
 
+# If full_name contains vowels use if_vowel
+# For consonants use consonant.
 
-# index = 0
-#       # create a variable that will represent the index of the string.
+# I can't finish... I've spent too much time on it, but I'll come back to it next week.
 
-#       while index < str.length
-#         # create a loop that will identify the end point to eliminate an infinite loop.
-#         puts str[index].next
-#         # moves to the next letter.
-#         index += 1
-#         # moves to the next character in the index acting as a counter.
+# p full_name.chop.succ
 
-#       end
-#       # end loop
-#     end
-#     # end method
-#   puts encrypt(pass)
-
-# def decrypt(str)
-#     # create a method that takes a string and moves it back one letter in the alphabet.
-#       index=0
-#       # create a variable that will represent the index of the string 
-#       alphabet="abcdefghijklmnopqrstuvwxyz"
-#       #define the alphabet as a variable..
-
-#       while index < str.length 
-#         # create a loop that will identify the end point to elimiate an infinite loop.
-#         str[index] = alphabet[alphabet.index(str[index])-1]
-#         # moves back one letter
-#         index += 1
-#         # moves to the next character in the index acting as a counter.
-#       end
-#       #end loop
-#       str
-#       #display result of string
-#     end
-#     # end method
-#   puts decrypt(pass)
-# end
-
-
-# def encrypt(str)
-
-
-#       def encrypt(str)
-#     # define a method that moves a string forward one letter in the alphabet.
-
-#       index = 0
-#       # create a variable that will represent the index of the string.
-
-#       while index < str.length
-#         # create a loop that will identify the end point to eliminate an infinite loop.
-#         puts str[index].next
-#         # moves to the next letter.
-#         index += 1
-#         # moves to the next character in the index acting as a counter.
-
-#       end
-#       # end loop
-#     end
-#     # end method
-#   puts encrypt(pass)
-
-  
-#   elsif question == "decrypt" then
-# # create an if statement asking which method the user wants
-#     def decrypt(str)
-#     # create a method that takes a string and moves it back one letter in the alphabet.
-#       index=0
-#       # create a variable that will represent the index of the string 
-#       alphabet="abcdefghijklmnopqrstuvwxyz"
-#       #define the alphabet as a variable..
-
-#       while index < str.length 
-#         # create a loop that will identify the end point to elimiate an infinite loop.
-#         str[index] = alphabet[alphabet.index(str[index])-1]
-#         # moves back one letter
-#         index += 1
-#         # moves to the next character in the index acting as a counter.
-#       end
-#       #end loop
-#       str
-#       #display result of string
-#     end
-#     # end method
-#   puts decrypt(pass)
-# end
+puts "Your alias is #{full_name.chop.succ}."
