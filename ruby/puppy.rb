@@ -11,3 +11,6 @@
 # playfullness: varies
 # loveability: high
 
+class Puppy
+end
+
