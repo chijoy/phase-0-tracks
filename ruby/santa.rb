@@ -6,6 +6,7 @@ class Santa
 		puts "Initializing Santa instance..."
 		@gender = gender
 		@ethnicity = ethnicity
+		@age = "0"
 	end
 
 	def speak
@@ -19,6 +20,7 @@ class Santa
 	def about
 	  puts "Gender: #{@gender}"
 	  puts "Ethnicity: #{@ethnicity}"
+	  puts "Age: #{@age}"
 	end
 
 	# reindeer_ranking = [
@@ -33,23 +35,21 @@ class Santa
 	# 	"Blitzen"
 	# ]
 
-	# age = 0
-
 end
 
 puts
 santa = Santa.new("female", "Caucasian")
 santa.about
 santa.speak
-santa.eat_milk_and_cookies("snickerdoodle")
+santa.eat_milk_and_cookies("Hershey's")
 puts
 santa = Santa.new("male", "Italian")
 santa.about
 santa.speak
-santa.eat_milk_and_cookies("snickerdoodle")
+santa.eat_milk_and_cookies("Take5")
 puts
 # p reindeer_ranking
 
 santas = []
-santas << Santa.new("agender", "black")
-santas << Santa.new("female", "Latino")
+santas << Santa.new("ambiguous", "NA")
+santas << Santa.new("transgender", "Irish-American")
