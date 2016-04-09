@@ -73,7 +73,7 @@ puts "What does Santa say?"
 santa.speak
 puts "Santa enjoyed the milk and candy you left!"
 santa.eat_milk_and_cookies("Hershey's")
-puts "Santa is mad at Rudolph. New ranking is:"
+puts "Santa is mad at Vixen. New ranking is:"
 santa.get_mad_at(Vixen)
 puts
 santa = Santa.new("male", "Italian")
