@@ -1,55 +1,47 @@
-# Define Elevator algorithm for your robot.
+Define Elevator Algorithm for your Personal Robot.
 
-# 1. Move forward until the elevator is reached
-# 2. Identify elevator by comparing to multiple 
-# images of elevators stored in memory.
-# 3. Identify up and down call buttons compared to 
-# multiple images of buttons stored in memory.
-# 4. Ask your human if they are going up or down.
-#	If up, 
-#		press the up call button.
-#	If down,
-#		press the down button.
-#	If no answer,
-#		repeat the question.
-#	Continue until your human provides an answer, or you have asked 5 times.
-# 5. When elevator door opens, confirm that elevator is there.
-#	If the elevator is there,
-#		proceed into the elevator.
-#	If the elevator is not there,
-#		advise the human "Warning Will Robinson!"
-# 6. If elevator is there and you have proceeded into the elevator, 
-# ask the human what floor they want to go to.
-#	If the human provides a number,
-#		press the corresponding floor number, compared to 
-#		multiple images of numbered buttons in memory.
-#	If the human doesn't provide a number,
-#		confirm that the human is there by saying, 
-#		"Hello, hello, can you hear me? Are you still there? 
-#		What floor do you want to go to?"
-#	Continue until your human provides an answer, until you have asked 5 times. 
+1. Identify elevator by comparing view to multiple images of elevators stored in memory.
+2. Move forward until the elevator is reached and you are directly in front of the call buttons.
+3. Identify up and down call buttons compared to multiple images of buttons stored in memory.
+4. Ask your human if they are going up or down.
+	If up, 
+		press the up call button.
+	If down,
+		press the down button.
+	If no answer,
+		repeat the question.
+	Continue until your human provides an answer, or you have asked 5 times, then quit.
+5. When elevator door opens, confirm that elevator is there.
+	If the elevator is there,
+		proceed into the elevator.
+	If the elevator is not there,
+		advise the human "Warning Will Robinson!"
+		If elevator is there and you have proceeded into the elevator,  ask the human what floor they want to go to.
+			If the human provides a number, press the corresponding floor number, compared to multiple images of numbered buttons in memory.
+			If the human doesn't provide a number, confirm that the human is there by saying, "Hello, hello, can you hear me? Are you still there? What floor do you want to go to?"
+			Continue until your human provides an answer, until you have asked 5 times, then quit. 
 
-# Define common task of taking your dogs for a walk.
+Define common task of taking your dogs for a walk.
 
-#1. Ask the dogs the question out loud, "Do you want to go for a walk?"
-#	If the dogs start barking furiously, 
-#		retrieve the leashes
-#	If the dogs don't start barking furiously,
-#		repeat the question because the dogs always want to go for a walk. 
-#		Repeat until the dogs start barking furiously.
-#2. Retrieve the leashes from their hook on the wall
-#	Snap on Duffie's leash
-#	Snap on Panda's leash
-#	Snap on Millie's leash. 
-#3. Stretch out back from so much bending over.
-#4. Open door.
-#5. Get pulled down the front stairs by wildly excited dogs. 
-#6. Walk dogs
-#	If weather is nice, walk dogs until tired.
-#	If weather is bad, walk dogs for as long as you can stand it.
-#7. Drag dogs back up your front stairs.
-#8. Take off leashes
-#	Unsnap Duffie's leash.
-#	Unsnap Panda's leash.
-#	Unsnap Millie's leash.
-#9. Hang up leashes while dogs jump on top of you, waiting for treat.
+1. Ask the dogs the question out loud, "Do you want to go for a walk?"
+	If the dogs start barking furiously, retrieve the leashes
+	If the dogs don't start barking furiously,
+		repeat the question because the dogs always want to go for a walk. 
+		Repeat until the dogs start barking furiously.
+2. Retrieve the leashes from their hook on the wall
+	Snap on Duffie's leash
+	Snap on Panda's leash
+	Snap on Millie's leash. 
+3. Stretch out back from so much bending over.
+4. Open door.
+5. Get pulled down the front stairs by wildly excited dogs. 
+6. Walk dogs
+	If weather is nice, walk dogs until tired.
+	If weather is bad, walk dogs for as long as you can stand it.
+7. Drag dogs back up your front stairs.
+8. Take off leashes
+	Unsnap Duffie's leash.
+	Unsnap Panda's leash.
+	Unsnap Millie's leash.
+9. Stretch out back from so much bending over.
+10. Hang up leashes while dogs jump on top of you, waiting for treat.
