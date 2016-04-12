@@ -1,33 +1,33 @@
-# Define Elevator algorithm for your robot.
+Define Elevator algorithm for your robot.
 
-# 1. Move forward until the elevator is reached
-# 2. Identify elevator by comparing to multiple 
-# images of elevators stored in memory.
-# 3. Identify up and down call buttons compared to 
-# multiple images of buttons stored in memory.
-# 4. Ask your human if they are going up or down.
-#	If up, 
-#		press the up call button.
-#	If down,
-#		press the down button.
-#	If no answer,
-#		repeat the question.
-#	Continue until your human provides an answer, or you have asked 5 times.
-# 5. When elevator door opens, confirm that elevator is there.
-#	If the elevator is there,
-#		proceed into the elevator.
-#	If the elevator is not there,
-#		advise the human "Warning Will Robinson!"
-# 6. If elevator is there and you have proceeded into the elevator, 
-# ask the human what floor they want to go to.
-#	If the human provides a number,
-#		press the corresponding floor number, compared to 
-#		multiple images of numbered buttons in memory.
-#	If the human doesn't provide a number,
-#		confirm that the human is there by saying, 
-#		"Hello, hello, can you hear me? Are you still there? 
-#		What floor do you want to go to?"
-#	Continue until your human provides an answer, until you have asked 5 times. 
+1. Move forward until the elevator is reached
+2. Identify elevator by comparing to multiple 
+images of elevators stored in memory.
+3. Identify up and down call buttons compared to 
+multiple images of buttons stored in memory.
+4. Ask your human if they are going up or down.
+	If up, 
+		press the up call button.
+	If down,
+		press the down button.
+	If no answer,
+		repeat the question.
+	Continue until your human provides an answer, or you have asked 5 times.
+5. When elevator door opens, confirm that elevator is there.
+	If the elevator is there,
+		proceed into the elevator.
+	If the elevator is not there,
+		advise the human "Warning Will Robinson!"
+6. If elevator is there and you have proceeded into the elevator, 
+ ask the human what floor they want to go to.
+	If the human provides a number,
+		press the corresponding floor number, compared to 
+		multiple images of numbered buttons in memory.
+	If the human doesn't provide a number,
+		confirm that the human is there by saying, 
+		"Hello, hello, can you hear me? Are you still there? 
+		What floor do you want to go to?"
+	Continue until your human provides an answer, until you have asked 5 times. 
 
 # Define common task of taking your dogs for a walk.
 
