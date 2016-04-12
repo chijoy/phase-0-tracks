@@ -1,7 +1,7 @@
 Define Elevator Algorithm for your Personal Robot.
 
 1. Identify elevator by comparing view to multiple images of elevators stored in memory.
-2. Move forward until the elevator is reached
+2. Move forward until the elevator is reached and you are directly in front of the call buttons.
 3. Identify up and down call buttons compared to multiple images of buttons stored in memory.
 4. Ask your human if they are going up or down.
 	If up, 
