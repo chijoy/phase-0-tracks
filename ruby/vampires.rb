@@ -1,84 +1,68 @@
-# Write a program that asks the new employee the following questions:
+# Write a program that asks the new employee the following questions,
+# to determine if they're a vampire.
 
 # Ask the employee for their name.
 puts
 puts "What is your name?"
 name = gets.chomp
-p name
+# p name
 
 # Ask the employee their age.
 puts
 puts "How old are you?"
-age = gets.chomp
-p age
+old = gets.chomp.to_i
+# p old
 
 # Ask the employee what year they were born.
 puts
 puts "What year were you born?"
 year = gets.chomp.to_i
-p year
+# p year
 
-# Calculate whether the age given is their actual age
-# bassed on the year they said they were born.
-actual_age = 2016 - year
+# Calculate whether the age given equals their actual age
+# based on the year they said they were born.
+# identify current year
+# actual age should be current year minus the year they were born
+# does the age given equal the age based on year born
+
+current_year = 2016
+actual_age = current_year - year
 puts
 p actual_age
+
+# test out if they gave the correct age.
+if actual_age == old
+	puts "They entered the right age."
+else
+	puts "They didn't enter the right age."
+end
 
 # Ask the employee if they would like garlic bread.
 puts
 puts "Our company cafeteria serves garlic bread. Should we order some for you?"
 garlic_bread = gets.chomp.downcase
 puts
-p garlic_bread
+# p garlic_bread
 
+# Ask the employee if they would like insurance
 puts "Would you like to enroll in the company's health insurance?"
 insurance = gets.chomp.downcase
 puts
-p insurance
+# p insurance
 
-if actual_age = age && (garlic_bread == "yes" || insurance == "yes")
+# If employee got age right, AND will eat garlic break OR wants insurance
+# Probably not a vampire.
+if actual_age == old && (garlic_bread = "yes" || insurance = "yes")
 	puts
 	puts "Probably not a vampire."
+# elsif actual_age != age && (garlic_bread = "no" || insurance = "no")
+# 	puts
+# 	puts "Probably a vampire."
+# elsif actual_age != age && (garlic_bread == "no" && insurance == "no")
+# 	puts
+# 	puts "Almost certainly a vampire."
+
 end
-
-if actual_age != age && (garlic_bread == "no" || insurance == "no")
-	puts
-	puts "Probably a vampire."
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
