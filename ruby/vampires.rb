@@ -1,3 +1,27 @@
+# Write a program that asks the new employee the following questions:
+
+# Ask the employee for their name.
+puts
+puts "What is your name?"
+name = gets.chomp
+
+# Ask the employee their age.
+puts "How old are you?"
+age = gets.chomp
+
+# Ask the employee what year they were born.
+puts "What year were you born?"
+year = gets.chomp
+
+
+
+# Ask the employee if they would like garlic bread.
+puts "Our company cafeteria serves garlic bread. Should we order some for you?"
+garlic_break = gets.chomp.downcase
+
+puts "Would you like to enroll in the company's health insurance?"
+insurance = gets.chomp.downcase
+
 
 
 
