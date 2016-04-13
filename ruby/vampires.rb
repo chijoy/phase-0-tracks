@@ -41,6 +41,10 @@ if actual_age = age && (garlic_bread == "yes" || insurance == "yes")
 	puts "Probably not a vampire."
 end
 
+if actual_age != age && (garlic_bread == "no" || insurance == "no")
+	puts
+	puts "Probably a vampire."
+
 
 
 
