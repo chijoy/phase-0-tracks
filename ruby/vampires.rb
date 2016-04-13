@@ -4,26 +4,42 @@
 puts
 puts "What is your name?"
 name = gets.chomp
+p name
 
 # Ask the employee their age.
+puts
 puts "How old are you?"
 age = gets.chomp
+p age
 
 # Ask the employee what year they were born.
+puts
 puts "What year were you born?"
-year = gets.chomp
+year = gets.chomp.to_i
+p year
 
-
+# Calculate whether the age given is their actual age
+# bassed on the year they said they were born.
+actual_age = 2016 - year
+puts
+p actual_age
 
 # Ask the employee if they would like garlic bread.
+puts
 puts "Our company cafeteria serves garlic bread. Should we order some for you?"
-garlic_break = gets.chomp.downcase
+garlic_bread = gets.chomp.downcase
+puts
+p garlic_bread
 
 puts "Would you like to enroll in the company's health insurance?"
 insurance = gets.chomp.downcase
+puts
+p insurance
 
-
-
+if actual_age = age && (garlic_bread == "yes" || insurance == "yes")
+	puts
+	puts "Probably not a vampire."
+end
 
 
 
