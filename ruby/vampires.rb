@@ -50,18 +50,26 @@ insurance = gets.chomp.downcase
 puts
 # p insurance
 
-# If employee got age right, AND will eat garlic break OR wants insurance
+# If employee got age right, AND will eat garlic bread OR wants insurance
 # Probably not a vampire.
-if actual_age == old && (garlic_bread = "yes" || insurance = "yes")
+if actual_age == old && (garlic_bread == "yes" || insurance == "yes")
 	puts
 	puts "Probably not a vampire."
-# elsif actual_age != age && (garlic_bread = "no" || insurance = "no")
-# 	puts
-# 	puts "Probably a vampire."
-# elsif actual_age != age && (garlic_bread == "no" && insurance == "no")
-# 	puts
-# 	puts "Almost certainly a vampire."
 
+# If employee gets age wrong, AND won't eat garlic bread OR doesn't want insurance
+# puts Probably a vampire.
+elsif actual_age != old && (garlic_bread == "no" || insurance == "no")
+	puts
+	puts "Probably a vampire."
+# If employee gets age wrong, AND won't eat garlic bread AND won't take insurance
+# puts "Almost certainly a vampire."
+elsif actual_age != old && garlic_bread == "no" && insurance == "no"
+	puts
+	puts "Almost certainly a vampire."
+elsif name == "Drake Cula" || name == "Tu Fang"
+	puts "Definitely a vampire."
+else
+	puts "Results inconclusive."
 end
 
 
