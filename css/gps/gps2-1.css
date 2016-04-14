@@ -1,28 +1,30 @@
-
 h1 {
-  background-color: blue;
+  background-color:   #0000FF;
+  text-align: center
 }
 
 .column-1 {
-  background-color: pink;
+  background-color:     #00BFFF;
   display: inline-block;
-  vertical-align: text-top;
-  width: 20%;
-  padding: 5% 10%;
-  border: 1px solid black;
+  vertical-align: top;
+  width: 40%;
+  padding: 1% 2% 2% 2%;
+  border: 3px solid black;
 }
 
 .column-2 {
-  background-color: pink;
+  background-color: #00BFFF;
   display: inline-block;
   vertical-align: top;
   position: relative;
-  width: 20%;
-  padding: 5% 10%;
-  margin-left: 5%;
-  border: 1px solid black;
+  width: 40%;
+  padding: 1% 2% 2% 2%;
+  margin-left: 2%;
+  border: 3px solid black;
 }
 
 footer {
-  background-color: green;
+  background-color: #B0E0E6;
+  padding: 1% 1% 1% 1%;
+  margin-top: 2%
 }
