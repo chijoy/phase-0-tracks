@@ -59,6 +59,7 @@ puts
 # age correct, no, no is FALSE
 # puts Probably not a vampire.
 if actual_age == old && (garlic_bread == "yes" || insurance == "yes")
+	reply == "Probably not a vampire."
 	puts
 	puts "Probably not a vampire."
 # If employee gets age wrong, AND won't eat garlic bread OR doesn't want insurance
@@ -69,6 +70,7 @@ if actual_age == old && (garlic_bread == "yes" || insurance == "yes")
 # garlic bread is no, insurance is no is true, but that means they're all true
 # puts Probably a vampire.
 elsif actual_age != old && (garlic_bread == "no" || insurance == "no")
+	reply == "Probably a vampire."
 	puts
 	puts "Probably a vampire."
 # # If employee gets age wrong, AND won't eat garlic bread AND won't take insurance
@@ -77,11 +79,13 @@ elsif actual_age != old && (garlic_bread == "no" || insurance == "no")
 # except that's also the same as the last option above... 
 # puts "Almost certainly a vampire."
 elsif actual_age != old && (garlic_bread == "no" && insurance == "no")
+	reply == "Almost certainly a vampire."
 	puts
 	puts "Almost certainly a vampire."
 # If employee enters Drake Cula or Tu Fang as their name
 # puts Definitely a vampire
 elsif name == "Drake Cula" || name == "Tu Fang"
+	reply == "Definitely a vampire."
 	puts
 	puts "Definitely a vampire."
 # For all else
@@ -91,7 +95,8 @@ else
 	puts "Results inconclusive."
 end
 
-
+puts
+puts "The result for #{name} is #{reply}."
 
 
 
