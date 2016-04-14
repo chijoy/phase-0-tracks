@@ -6,5 +6,14 @@ puts "What is the fur color?"
 color = gets.chomp
 puts "Is the hamster a good candidate for adoption?"
 candidate = gets.chomp
+p candidate
 puts "What is the estimated age of your hamster?"
 age = gets.chomp.to_i
+# p age
+# if age is an integer, okay, if nil then nil
+	if age >= 1 
+		age = age
+	else
+		age = nil
+	end
+p age
