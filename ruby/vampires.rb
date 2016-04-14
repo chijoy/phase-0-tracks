@@ -28,14 +28,14 @@ year = gets.chomp.to_i
 current_year = 2016
 actual_age = current_year - year
 puts
-p actual_age
+# p actual_age
 
 # test out if they gave the correct age.
-if actual_age == old
-	puts "They entered the right age."
-else
-	puts "They didn't enter the right age."
-end
+# if actual_age == old
+# 	puts "They entered the right age."
+# else
+# 	puts "They didn't enter the right age."
+# end
 
 # Ask the employee if they would like garlic bread.
 puts
@@ -79,16 +79,16 @@ elsif actual_age != old && (garlic_bread == "no" || insurance == "no")
 elsif actual_age != old && (garlic_bread == "no" && insurance == "no")
 	puts
 	puts "Almost certainly a vampire."
-# # If employee enters Drake Cula or Tu Fang as their name
-# # puts Definitely a vampire
-# elsif name == "Drake Cula" || name == "Tu Fang"
-# 	puts
-# 	puts "Definitely a vampire."
-# # For all else
-# # puts Results inconclusive.
-# else
-# 	puts
-# 	puts "Results inconclusive."
+# If employee enters Drake Cula or Tu Fang as their name
+# puts Definitely a vampire
+elsif name == "Drake Cula" || name == "Tu Fang"
+	puts
+	puts "Definitely a vampire."
+# For all else
+# puts Results inconclusive.
+else
+	puts
+	puts "Results inconclusive."
 end
 
 
