@@ -10,7 +10,7 @@ number = gets.chomp.to_i
 p number
 
 index = 0
-until numb
+until number
 
 
 	# Write a program that asks the new employee the following questions,
