@@ -1,53 +1,61 @@
-# define an encrypt method 
-# declare index variable = 0
-# create a loop
-# while index is less than the length of the string we put in
-# take each letter of the string and 
-# advances every letter of a string using 
-# an index += 1
-# assume lowercase
-# INPUT: abc
-# OUTPUT: bcd
-
-
-
-# def encrypt(str)
-#   index = 0
-#   while index < str.length
-#     str[index] = str[index].next
-#     index += 1
-#   end
-#   puts str
-# end
-
-# encrypt("abc")
-# encrypt("def")
-
-# decrypt method that finds out where a letter is
-# then access the letter before it
-
-# def decrypt(str)
-#   index = 0
-#   alph = "abcdefghijklmnopqrstuvwxyz"
-#   while index < str.length
-#     # p str.index(str)
-#     p alph.index(str)
-#     str[index] = alph.index(str) - 1
-#     # str[index] = str[index] - 1
-#     index += 1
-#   end
-#   puts str
-# end
-
-def decrypt(str)
-  while index < str.length
-  alph = "abcdefghijklmnopqrstuvwxyz"
-  str = alph.index(str) - 1
-  str = alph[str]
-  index += 1
+def encrypt(encrypt_phrase)
+  loop_counter = 0
+  while loop_counter < encrypt_phrase.length
+    current_letter = encrypt_phrase[loop_counter]
+    if current_letter == "z"
+      encrypt_phrase[loop_counter] = "a"
+    elsif current_letter == " "
+      encrypt_phrase[loop_counter] = " "
+    else
+      encrypt_phrase[loop_counter] = encrypt_phrase[loop_counter].next
+    end
+    loop_counter += 1
   end
-  puts str
+ encrypt_phrase
 end
 
-decrypt("e")
-# decrypt("afe")
+# p encrypt("abc")
+# p encrypt("zed")
+
+def decrypt(encoded_phrase)
+  alphabet = "abcdefghijklmnopqrstuvwxyz"
+  loop_counter = 0
+  decrypted_result = ""  
+  while loop_counter < encoded_phrase.length
+    current_index = alphabet.index(encoded_phrase[loop_counter])
+    current_letter = encoded_phrase[loop_counter]
+    if current_letter == 'a'
+      decrypted_result += 'z'
+    elsif current_letter == " "
+      decrypted_result += " "
+    else
+      previous_letter = alphabet[current_index - 1]
+      decrypted_result += previous_letter
+    end
+    loop_counter += 1
+  end
+  decrypted_result
+end
+
+# p decrypt("bcd")
+# p decrypt("afe")
+
+# p decrypt(encrypt("sword fish"))
+
+# ask user if they want to decrypt or encrypt a password
+# retrieve answer
+# ask user for password
+# retrieve password
+# apply conditional logic to use decrypt or encrypt methods based on answer
+# run decrypt or encrypt method on password
+# based on answer for decrypt or encrypt, print result from password
+
+puts "Would you like to encrypt or decrypt a password?"
+encrypt_decrypt = gets.chomp.downcase
+puts "What is the password you would like to #{encrypt_decrypt}?"
+agent_password = gets.chomp
+if encrypt_decrypt == "encrypt"
+  p encrypt(agent_password)
+else
+  p decrypt(agent_password)
+end
