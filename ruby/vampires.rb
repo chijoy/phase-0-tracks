@@ -7,14 +7,12 @@
 # so if the employees number is 2, repeat the survey until number == 2
 puts "How many employees will be processed?"
 employees = gets.chomp.to_i
-p employees
+# p employees
 
 index = 0
 while index < employees
 
-	# index = 0
-# while index < employees
-# 	index += 1
+index += 1
 
 
 	# Write a program that asks the new employee the following questions,
@@ -116,6 +114,7 @@ while index < employees
 	end
 end
 
+puts
 puts "Please name any allergies that you have, one at a time, then type 'Done.'"
 puts "If no allergies, just type 'Done.'"
 allergies = gets.chomp.downcase
@@ -127,12 +126,13 @@ allergies = gets.chomp.downcase
 until allergies == "done" do
 	if allergies == "sunshine"
 		puts "Probably a vampire."
-	break
+	else
+		allergies = gets.chomp
 	end
 end
 
-	puts
-	puts "The result for #{name} is: #{reply}"
+puts
+puts "The result for #{name} is: #{reply}"
 
 puts
 puts "Actually, never mind! What do these questions have to do with anything?"
