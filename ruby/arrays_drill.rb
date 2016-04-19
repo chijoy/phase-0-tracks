@@ -1,3 +1,15 @@
+
+# define a method that takes three items and returns an array
+def make_array(a, b, c) # define the method
+  new_array = [] # create an empty array
+  new_array = new_array + [a, b, c] # add three items to it
+  
+  p new_array
+  
+end
+
+make_array("scared", "happy", "sad")
+
 beagles = []
 
 p beagles
