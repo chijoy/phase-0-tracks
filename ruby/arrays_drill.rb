@@ -10,6 +10,17 @@ end
 
 make_array("scared", "happy", "sad")
 
+# define a method that takes an array and an item and returns them
+def add_to_array(arr, str) # define a method with an array and a string
+  new_array = arr << str # create a new array with the array and add the string
+  
+  p new_array
+  
+end
+
+add_to_array(["lions", "tigers", "bears"], 2,)
+
+
 beagles = []
 
 p beagles
