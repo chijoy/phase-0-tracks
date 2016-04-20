@@ -1,101 +1,102 @@
-# write a program that will allow an interior designer to enter the details of a given client
+# pseudocode and write a program that will allow an interior designer 
+# to enter the details of a given client.
 
-# Initialize hash
+# Create an empty hash
 client = {}
 
-#print the hash
+# Prompt the designer for client's name
 puts
-p client
+puts "What is the client's first name?"
+first_name = gets.chomp.capitalize
+# p first_name
+
+# Add first_name to client hash
+client[:first_name] = first_name
+# p client
+
+# Prompt the designer for client's last name
 puts
+puts "What is the client's last name?"
+last_name = gets.chomp.capitalize
+# p last_name
 
-# Ask user for their first name and capitalize.
-puts "Hello! What is your first name?"
-first = gets.chomp.capitalize
-client[:first] = first
+# Add last_name to client hash
+client[:last_name] = last_name
+# p client
 
-# Ask user for their last name and capitalize.
-puts "What is your last name?"
-last = gets.chomp.capitalize
-client[:last] = last
-
-# Ask user for their age and ensure integer.
-puts "What is your age?"
+# Prompt the designer for client's age
+puts
+puts "What is the client's age?"
 age = gets.chomp.to_i
+# p age
+
+# Add age to client hash
 client[:age] = age
+# p client
 
-# Ask user for children and ensure integer.
-puts "How many children do you have?"
-children = gets.chomp.to_i
-client[:children] = children
-
-# Ask user their decor theme and capitalize.
-puts "What decor theme would you like?"
-decor = gets.chomp.capitalize
-client[:decor] = decor
-
-p client
-
-# Add more information to the hash.
-puts "Do you want to spend a lot of money?"
-money = gets.chomp
-client[:money] = money
-	if money == "yes" 
-		money = true
-		puts "Great!"
-	else
-		puts "Fine..."
-	end
-
-# confirm new hash
+# Prompt the designer for the number of children the client has
 puts
-p client
-puts
+puts "How many children does the client have?"
+number_of_children = gets.chomp.to_i
+# p children
 
-# Print out all information.
-puts
-puts "Your first name is #{first},"
-puts "Your last name is #{last}," 
-puts "you are #{age} years old,"
-puts "you have #{children} children,"
-puts "you would like your decor theme to be #{decor},"
-if money == true
-	puts "and you want to spend a lot of money."
-else
-	puts "and you don't want to spend a lot of money."
-end
+# Add children to client hash
+client[:number_of_children] = number_of_children
+# p client
 
-#Confirm if information is correct.
-puts "Is that information correct? If so, enter yes, if not, enter no."
+# Prompt the designer for their decor theme
+puts
+puts "What is the client's decor theme?"
+decor_theme = gets.chomp.capitalize
+# p theme
+
+# Add decor theme to client hash
+client[:decor_theme] = decor_theme
+# p client
+
+# Print the hash back out to the screen in a print friendly version
+puts
+puts "Here is your client's information:"
+puts "First name: #{first_name}"
+puts "Last name: #{last_name}"
+puts "Age: #{age}"
+puts "Number of children: #{number_of_children}"
+puts "Decor theme: #{decor_theme}"
+
+# ask if any changes need to be made
+# if none, instruct the designer to enter none
+# otherwise, instruct the designer to enter the label that needs to be changedd
+puts "Do any changes need to be made?"
+puts "If not, type none, otherwise, enter the label that needs to be updated."
 reply = gets.chomp
-if reply == "yes"
-	puts "Thank you for providing us with your information."
-else
-	puts "What would you like to change?"
-	puts "Please enter first, last, age, children, or decor."
-	change = gets.chomp
-	if change == "first"
-		puts "Please enter your first name."
-		first = gets.chomp.capitalize
-		client[first] = first
-	elsif change == "last"
-		puts "Please enter your last name."
-		last_name = gets.chomp.capitalize
-		client[last] = last
-	elsif change == "age"
-		puts "Please enter your age."
-		age = gets.chomp.to_i
-		client[age] = age
-	elsif change == "children"
-		puts "Please enter the number of children you have."
-		children = gets.chomp.to_i
-		client[children] = children
-	elsif change == "decor"
-		puts "Please enter the decor theme you would like."
-		decor = gets.chomp.capitalize
-		client[decor] = decor
+	if reply == "none"
+		puts "Thank you!"
+	elsif reply == "first name"
+		puts "Enter the first name."
+		new_first_name = gets.chomp.capitalize
+		client[first_name] = new_first_name
+		puts "The client's first name has been updated to #{new_first_name}."
+	elsif reply == "last name"
+		puts "Enter the last name."
+		new_last_name = gets.chomp.capitalize
+		client[last_name] = new_last_name
+		puts "The client's last name has been updated to #{new_last_name}."
+	elsif reply == "age"
+		puts "Enter the age."
+		new_age = gets.chomp.to_i
+		client[age] = new_age
+		puts "The client's age has been updated to #{new_age}."
+	elsif reply == "number of children"
+		puts "Enter the number of children."
+		new_number_of_children = gets.chomp.to_i
+		client[number_of_children] = new_number_of_children
+		puts "The client's number of children has been updated to #{new_number_of_children}."
+	elsif reply == "decor theme"
+		puts "Enter the decor theme."
+		new_decor_theme = gets.chomp.capitalize
+		client[decor_theme] = new_decor_theme
+		puts "The client's decor theme has been updated to #{new_decor_theme}."
 	else
-		puts "Thank you."
+		puts "Sorry, I didn't understand."
 	end
-end
 
-p client
