@@ -1,50 +1,58 @@
-# assignment 5.5 release 2
-# design and build a nested data structure for an office building
-# the building is the hash, 
-# the offices are an array
 
-building = {
-	coffee_house: {
-		name: "Starbucks",
-		menu: [
-			"coffee",
-			"pastries",
-			"chocolate"
+# create a nested data structure using arays and hashes
+school = { # start with a hash
+	first_grade_classroom: { # here's a hash for one classroom
+		name: "First Grade Classroom", # here's a key, value in the hash
+		class_information: { # here's a hash within a hash
+			number_of_seats: 20, # here's a key, value in the hash
+			number_of_students: 10 # here's a key, value in the hash
+			},
+		recess: true, # here's a key, value in the hash
+		meals: [ # here's an array with the hash
+			"healthy meals", # here's an item in the array at index 0
+			"healthy snacks" # here's an item in the array at index 1
 		]
 	},
-	
-	retail_store: {
-		name: "Staples",
-		for_sale: [
-			"printers",
-			"paper",
-			"pens"
+	second_grade_classroom: { # here's a hash for second classroom
+		name: "Second Grade Classroom", # here's a key, value in the hash
+		class_information: {# here's a hash within a hash
+			number_of_seats: 20, # here's a key, value in the hash
+			number_of_students: 12 # here's a key, value in the hash
+			}, 
+		recess: true, # here's a key, value in the hash
+		meals: [ # here's an array with the hash
+			"healthy meals", # here's an item in the array at index 0
+			"healthy snacks" # here's an item in the array at index 1
 		]
 	},
-	
-	clothing_store: {
-		name: "Nordstoms",
-		for_sale: [
-			"clothes",
-			"jewelry",
-			"shoes"
+	third_grade_classroom: { # here's a hash for third classroom
+		name: "Third Grade Classroom", # here's a hash for second classroom
+		class_information: { # here's a hash within a hash
+			number_of_seats: 20, # here's a key, value in the hash
+			number_of_students: 8
+			},
+		recess: false, # here's a key, value in the hash
+		meals: [ # here's an array with the hash
+			"healthy meals", # here's an item in the array at index 0
+			"healthy snacks" # here's an item in the array at index 1
 		]
 	}
 }
 
-
-# print individual pieces and types of access
-puts
-p building
+# print out the nested data structre to test
+p school
 puts 
-p building[:coffee_house][:menu]
+# print the meals for the first grade classroom
+p school[:first_grade_classroom][:meals]
+# print the first meal for the first_grade_classroom, at index 0
+p school[:first_grade_classroom][:meals][0]
+# add a meal to the third_grade_classroom
+school[:third_grade_classroom][:meals].push "sweets"
 puts
-p building[:retail_store][:name]
+p school[:third_grade_classroom][:meals]
+# print the number of students in the second grade classroom
 puts
-p building[:retail_store][:for_sale][2]
+p school[:second_grade_classroom][:class_information][:number_of_students]
+# print whether there is recess for third graders
 puts
-p building[:clothing_store][:for_sale][1]
-puts
-p building[:coffee_house][:menu].push("popcorn")
-puts
-p building[:clothing_store][:for_sale].reverse
+p school[:third_grade_classroom][:recess]
