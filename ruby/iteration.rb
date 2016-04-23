@@ -1,53 +1,59 @@
-# Release #1
+# write a method that takes a block
 
-# declare an array.
-
-names = [
-  "Joe", 
-  "Jim",
-  "Bob"]
-p names
-
-# Iterate through an array using .each
-names.each { |name| puts "Here are their names: #{name}" }
-
-# Iterate through an array using .map
-modified_names = names.map do |name|
-  puts name
-  name.next
+# define a method for favorite color
+def favorite_color
+	puts "What is your favorite color?"
+	3.times{yield}
 end
 
-# Show the modification
-puts "Here's the new names:"
-p names
-p modified_names
-  
-# declase a hash.
-desc = { "Joe" => "short", "Jim" => "tall", "Bob" => "skinny"}
-p desc
+# call the method with a block
+favorite_color { puts "Red."}
 
-# Iterate through the hash using .each.
-desc.each {|name,key| puts "Here's the info: #{name} - #{key}"}
+# declare an array
+hollywood_actors = ["Tom Hanks", "Robert Downey Jr.", "Scarlet Johanson"]
 
+# declare a hash
+musicians = {"The Beatles" => "Paul McCartney", "Rolling Stones" => "Mick Jagger", "Prince" => "Prince"}
 
-# Release 2
+# iterate through array using .each
+hollywood_actors.each do |actor| 
+	puts actor
+end
 
-# Define array of numbers.
-numbers = [1,2,3,4,5,6]
+# iterate through hash using .each
+musicians.each do |band, musician|
+	puts "Here's the band: #{band} and here's the musician: #{musician}!"
+end
+
+# use .map! modifying the data in some way for the array
+hollywood_actors.map! { |actor| actor + "!"}
+	
+p hollywood_actors
+
+numbers = [1, 2, 3, 4, 5]
+# write a method that iterates through numbers for array
+# delete number if less than 5
+
+numbers.delete_if { |number| number < 5 }
+
 p numbers
 
-# Iterate through the array using .delete 
-numbers.delete_at(2)
-  puts "Here are the new numbers without the index at 2: #{numbers}!"
+# write a method that iterates through numbers for hash
+# delete integer if equal to 1
 
-# Iterate through the array until a certain condition is met.
-numbers.delete_if {|number| number < 2 }
-  puts "Here are the numbers without numbers less than 2: #{numbers}!"
+new_numbers = {"one" => 1, "two" => 2, "three" => 3}
 
-# A different method.
-numbers.keep_if {|number| number > 2 }
-  puts "Here are the numbers with numbers greater than 2: #{numbers}!"
+new_numbers.delete_if { |number, int| int == 1 }
 
-# A method that will remove items until condition is false.
-numbers.drop_while {|number| number != 6 }
-  puts "Here are the new numbers after condition false is met: #{numbers}!"
+p new_numbers
+
+#filter through array and select first item in array
+p numbers.first
+
+#filter through hash and select (key, value) pair for int 2
+p new_numbers.select {|number, int| int == 2}
+
+# filter through array and select last item in array
+p numbers.last
+
+p new_numbers.keep_if {|number, int| int == 3}
