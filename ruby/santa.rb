@@ -2,7 +2,13 @@
 class Santa
 	# add initialize method
 	# puts Initializing Santa instance...
-	def initialize
+	def initialize(gender, ethnicity)
+		# add gender, which will be a string passed in on initialization
+		# same as name in reindeer example
+		@gender = gender
+		# add ethnicity, which will be a string passed in on initialization
+		# same as name in reindeer example
+		@ethnicity = ethnicity
 		puts
 		puts "initializing Santa instance..."
 	end
