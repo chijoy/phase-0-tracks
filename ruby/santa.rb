@@ -3,14 +3,19 @@ class Santa
 	# add initialize method
 	# puts Initializing Santa instance...
 	def initialize(gender, ethnicity)
+		puts
+		puts "initializing Santa instance..."
 		# add gender, which will be a string passed in on initialization
 		# same as name in reindeer example
 		@gender = gender
 		# add ethnicity, which will be a string passed in on initialization
 		# same as name in reindeer example
 		@ethnicity = ethnicity
-		puts
-		puts "initializing Santa instance..."
+		# add reindeer array, that's not passed in on initialization
+		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+		# add age attribute that's not passed in on initialization
+		@age = 0
+		
 	end
 	# add a speak method
 	# prints "Ho, ho, ho! Haaaappy holidays!"
