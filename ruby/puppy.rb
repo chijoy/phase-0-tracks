@@ -8,9 +8,13 @@
 # eye count: 2
 # legs: 4
 # tail: 1
-# playfullness: varies
 # loveability: high
+
+# BEHAVIOR
+# playfullness: varies
+# bathroom breaks: constant
+# eating: always
+# sleeping: see playfullness
 
 class Puppy
 end
-
