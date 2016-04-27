@@ -15,6 +15,9 @@ class Santa
 		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 		# add age attribute that's not passed in on initialization
 		@age = 0
+		# add some diverse initializations
+		@height = height
+		size = size
 		
 	end
 	# add a speak method
@@ -30,6 +33,15 @@ class Santa
 		puts "That was a good #{cookie_type} cookie!"
 	end
 end
+
+height = ["short", "medium" "tall"]
+size = ["not too chubby", "chubby", "very chubby"]
+cheeks = ["a little rosy", "rosy", "very rosy"]
+gender = ["male", "female", "agender", "prefer not to say"]
+ethnicity = ["black", "hispanic", "asian", "irish", "prefer not to say"]
+
+
+
 
 santa = Santa.new
 santa.speak
