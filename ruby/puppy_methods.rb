@@ -1,95 +1,66 @@
 class Puppy
+  def initialize
+    puts "Initializing new puppy instance..."
+  end
 
   def fetch(toy)
     puts "I brought back the #{toy}!"
-    toy
+  toy
   end
-  
-# define a speak method
-# input: takes an integer for the number of times it will speak
-# output: prints Woof! dictacted by the integer
 
-  def speak
-    3.times {|bark_count| puts "Woof!" }
+  def speak(integer)
+    integer.times {puts "Woof!"}
   end
-  
-# define a roll_over method that prints "rolls over"
+
+  def dog_years(integer)
+    integer * 7
+  end
 
   def roll_over
     puts "Roll over!"
   end
-  
-  # define a dog_years method
-  # take the dogs age and multiply by 7 to get dog years
 
-  def dog_years(x)
-    puts x * 7
+  def sit
+    puts "Dog sits down."
   end
   
-# define a play method that prints "Lays down dead"
-	def play_dead
-	  puts "Lays down dead... :("
-	end
+end
 
-# define a method that puts "Initializing new puppy instance"
-	  
-	def initialize
-	  puts "Initializing new puppy instance..."
-	end
+
+spot = Puppy.new
+spot.fetch("ball")
+spot.speak(3)
+spot.dog_years(2)
+spot.sit
+
+
+class Groomers
+  
+    def initialize
+      puts "Initializing groomers instance..."
+    end
+
+    def nail_clip
+      puts "The nails have been clipped."
+    end
+
+    def shampoo
+      puts "The animal has been shampoo'd."
+    end
 
 end
 
-# define a new class for Cat
+groomers = []
 
-class Cat
-
-# define a meow method
-# that will print "Meeeeooow" a number of times
-# based on a given integer
-  def meow
-    2.times {|meow_count| puts "Meeeeooow"}
-  end  
-  
-# define a food method that puts "Demands food"
-  def food
-    puts "Demands food."
-  end
-  
-# define an initialize method
-# that puts "Initializing new cat instance..."
-
-  def initialize
-    puts "Initializing new cat instance..."
-  end
-
-end
-  
-# Initialize and test puppy instances
-puppy = Puppy.new
-puppy.fetch("ball")
-puppy.speak
-puppy.roll_over
-puppy.dog_years(4)
-puppy.play_dead
-
-# initialze and test cat instances
-
-cat = Cat.new
-
-# create a loop to make 50 instances of cat classs
-
-cats = []
-cats.length == 0
-
-
-until cats.length == 50
-  cat = Cat.new
-  cats << cat
+50.times do
+  puts "Here's a new instance."
+  groomers << Groomers.new 
 end
 
-p cats.length
+p groomers
 
-cats.each do |cat|
-	cat.meow
-	cat.food
+# iterate through using .each
+groomers.each do |groomer|
+  groomer.nail_clip
+  groomer.shampoo
 end
