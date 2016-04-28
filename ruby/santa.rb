@@ -13,6 +13,7 @@ class Santa
 		@ethnicity = ethnicity
 		# add reindeer array, that's not passed in on initialization
 		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+		# p @reindeer_ranking
 		# add age attribute that's not passed in on initialization
 		@age = 0
 	end
@@ -32,7 +33,16 @@ class Santa
 	# add celebrate_birthday method to age Santa by one year
 	def celebrate_birthday
 		@new_age = @age + 1
-		puts " Santa is now: #{@new_age}" 
+		puts "Santa was: #{@age}."
+		puts "Santa is now: #{@new_age}!" 
+	end
+
+	# add a method that takes a reindeer's name as an argument
+	# and moves that reindeer to last place in the rankings
+	def get_mad_at(reindeer) # method takes a reindeer's name
+		@reindeer_ranking.delete(reindeer) # deletes a reindeer
+ 		@reindeer_ranking.push(reindeer) # inserts it back in
+ 		puts @reindeer_ranking
 	end
 
 end
@@ -44,8 +54,7 @@ santa = Santa.new("female", "black")
 santa.speak
 santa.eat_milk_and_cookies("chocolate")
 santa.celebrate_birthday
-
-
+santa.get_mad_at("Rudolph")
 
 
 
