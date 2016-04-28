@@ -45,25 +45,43 @@ class Santa
  		puts @reindeer_ranking
 	end
 
-	# getter method for age
+	# getter method for age before refactoring
 	def age
 		@age
 	end
 
-	# getter method for ethnicity
+	# getter method for ethnicity before refactoring
 	def ethnicity
 		@ethnicity
 	end
 
-	# need to define a getter method for gender!!!
+	# need to define a getter method for gender!!! before refactoring
 	def gender
     	@gender
   	end
 
-	# add setter method for gender
+	# add setter method for gender before refactoring
 	def gender=(new_gender)
 		@gender = new_gender
 	end
+
+# do i need these setter methods too?
+# getter method for age before refactoring
+	def age
+		@age
+	end
+
+	# getter method for ethnicity before refactoring
+	def ethnicity
+		@ethnicity
+	end
+
+
+
+
+
+
+
 end
 
 
@@ -76,6 +94,8 @@ santa.get_mad_at("Rudolph")
 santa.gender = "male"
 puts "Santa is now #{santa.gender}!"
 
+
+# write a program that creates lots of Santas.
 # santas = []
 # example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
 # example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
