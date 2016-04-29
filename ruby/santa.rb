@@ -1,96 +1,104 @@
-# Create a Santa class
-
+# initiate a Santa class
 class Santa
-# define an initialize method
-# output: "Initializing Santa instance..."
+	# add initialize method
+	# puts Initializing Santa instance...
 	def initialize(gender, ethnicity)
-		puts "Initializing Santa instance..."
-# add gender attribute
+		puts
+		puts "initializing Santa instance..."
+		# add gender, which will be a string passed in on initialization
+		# same as name in reindeer example
 		@gender = gender
-# add ethnicity attribute
+		# add ethnicity, which will be a string passed in on initialization
+		# same as name in reindeer example
 		@ethnicity = ethnicity
-# add array of reindeer ranking
-		@reindeer_ranking = [
-		"Rudolph",
-		"Dasher",
-		"Dancer",
-		"Prancer",
-		"Vixen",
-		"Comet",
-		"Cupid",
-		"Donner",
-		"Blitzen"
-	]
-# add age attribute
+		# add reindeer array, that's not passed in on initialization
+		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+		# p @reindeer_ranking
+		# add age attribute that's not passed in on initialization
 		@age = 0
 	end
-# add a celebrate_birthday attribute that will age Santa by one year.
-# @age += 1
-	def celebrate_birthday
-		puts @age += 1
-	end
-# add a get_mad_at attribute that will 
-# ake the reindeer's name 
-# from the array and
-# move him to last place in the array
-# the last position in an array is -1
-	def get_mad_at(reindeer_name)
-		@reindeer_ranking.delete(reindeer_name)
-		@reindeer_ranking.insert(-1, reindeer_name)
-	end
-
-# define a speak method 
-# input "Ho, ho, ho! Haaaaappy Holidays!"
-# output "Ho, ho, ho! Haaaaappy Holidays!"
+	# add a speak method
+	# prints "Ho, ho, ho! Haaaappy holidays!"
 	def speak
-			puts "Ho, ho, ho! Haaaaappy Holidays!"
+		puts "Ho, ho, ho! Haaaappy holidays!"
 	end
-# define an eat_milk_and_cookies method
-# input type of cookies
-# output: takes the type of cookie and inserts it into
-# "That was a good (cookie)!"
-	def eat_milk_and_cookies(cookie)
-		puts "That was a good #{cookie}!"
+	
+	# add an eat_milk_and_cookies method
+	# take a cookie type as a parameter
+	# prints "That was a good <cookie type>!"
+	def eat_milk_and_cookies(cookie_type)
+		puts "That was a good #{cookie_type} cookie!"
 	end
-# define an about method that puts class attributes
-	def about
-	  puts "Gender: #{@gender}"
-	  puts "Ethnicity: #{@ethnicity}"
-	  puts "Age: #{@age}"
-	  puts "Reindeer ranking in terms of most preferred"
-	  puts "to least preferred is:"
-	  puts "#{@reindeer_ranking}"
+
+	# add celebrate_birthday method to age Santa by one year
+	def celebrate_birthday
+		@new_age = @age + 1
+		puts "Santa was: #{@age}."
+		puts "Santa is now: #{@new_age}!" 
 	end
+
+	# add a method that takes a reindeer's name as an argument
+	# and moves that reindeer to last place in the rankings
+	def get_mad_at(reindeer) # method takes a reindeer's name
+		@reindeer_ranking.delete(reindeer) # deletes a reindeer
+ 		@reindeer_ranking.push(reindeer) # inserts it back in
+ 		puts @reindeer_ranking
+	end
+
+	# getter method for age before refactoring
+	def age
+		@age
+	end
+
+	# getter method for ethnicity before refactoring
+	def ethnicity
+		@ethnicity
+	end
+
+	# need to define a getter method for gender!!! before refactoring
+	def gender
+    	@gender
+  	end
+
+	# add setter method for gender before refactoring
+	def gender=(new_gender)
+		@gender = new_gender
+	end
+
+# do i need these setter methods too?
+# getter method for age before refactoring
+	def age
+		@age
+	end
+
+	# getter method for ethnicity before refactoring
+	def ethnicity
+		@ethnicity
+	end
+
+
+
+
+
+
+
 end
-# driver code
-puts
-santa = Santa.new("female", "Caucasian")
-puts "Here's Santa's details:"
-santa.about
-puts "Here's Santa's birthday!"
-santa.celebrate_birthday
-puts "What does Santa say?"
-santa.speak
-puts "Santa enjoyed the milk and candy you left!"
-santa.eat_milk_and_cookies("Hershey's")
-puts "Santa is mad at Vixen. New ranking is:"
-santa.get_mad_at(Vixen)
-puts
-santa = Santa.new("male", "Italian")
-puts "Here's Santa's details:"
-santa.about
-puts "Here's Santa's birthday!"
-santa.celebrate_birthday
-puts "What does Santa say?"
-santa.speak
-puts "Santa enjoyed the milk and candy you left!"
-santa.eat_milk_and_cookies("Take5")
-puts "Santa is mad at Rudolph. New ranking is:"
-santa.get_mad_at(Rudolph)
 
-# santas_names = ["Fred", "Barney"]
 
+
+santa = Santa.new("female", "black")
+santa.speak
+santa.eat_milk_and_cookies("chocolate")
+santa.celebrate_birthday
+santa.get_mad_at("Rudolph")
+santa.gender = "male"
+puts "Santa is now #{santa.gender}!"
+
+
+# write a program that creates lots of Santas.
 # santas = []
-# santas << Santa.new("ambiguous", "NA")
-# santas << Santa.new("transgender", "Irish-American")
-
+# example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+# example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+# example_genders.length.times do |i|
+#   santas << Santa.new(example_genders[i], example_ethnicities[i])
+# end
