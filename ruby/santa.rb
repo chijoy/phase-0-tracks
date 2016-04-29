@@ -1,12 +1,18 @@
 # initiate a Santa class
 class Santa
+	# add attr_reader and attr_writer shortcuts
+	# gender is in both, so just need it in attr_accessor
+	attr_reader :age, :ethnicity
+	attr_accessor :gender
+
 	# add initialize method
 	# puts Initializing Santa instance...
-	def initialize(gender, ethnicity)
+	def initialize(gender, ethnicity, name)
 		puts
 		puts "initializing Santa instance..."
 		# add gender, which will be a string passed in on initialization
 		# same as name in reindeer example
+		@name = name
 		@gender = gender
 		# add ethnicity, which will be a string passed in on initialization
 		# same as name in reindeer example
@@ -17,19 +23,13 @@ class Santa
 		# add age attribute that's not passed in on initialization
 		@age = 0
 	end
-	
-	# add attr_reader and attr_writer shortcuts
-	attr_reader :age, :ethnicity, :gender
-	attr_writer :age, :ethnicity, :gender
-
-
 
 	# add a speak method
 	# prints "Ho, ho, ho! Haaaappy holidays!"
 	def speak
 		puts "Ho, ho, ho! Haaaappy holidays!"
 	end
-	
+
 	# add an eat_milk_and_cookies method
 	# take a cookie type as a parameter
 	# prints "That was a good <cookie type>!"
@@ -71,49 +71,32 @@ class Santa
 	# def gender=(new_gender)
 	# 	@gender = new_gender
 	# end
-
-# # do i need these setter methods too?
-# # getter method for age before refactoring
-# 	def age
-# 		@age
-# 	end
-
-# 	# getter method for ethnicity before refactoring
-# 	def ethnicity
-# 		@ethnicity
-# 	end
 end
 
 # DRIVER CODE
 
-santa = Santa.new("female", "black")
+santa = Santa.new("female", "black", "Sally")
 santa.speak
 santa.eat_milk_and_cookies("chocolate")
 santa.celebrate_birthday
 santa.get_mad_at("Rudolph")
-santa.gender = "male"
-puts "Santa is now #{santa.gender}!"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# santa.gender = "male"
+# puts "Santa is now #{santa.gender}!"
 
 # write a program that creates lots of Santas.
-# santas = []
-# example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
-# example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
-# example_genders.length.times do |i|
-#   santas << Santa.new(example_genders[i], example_ethnicities[i])
-# end
+# add array of names
+# add randomizer for santa's age from 0 and 140
+
+santas = []
+names = ["Jolly", "New", "Big", "Old", "Good", "Mall", "Young"]
+random_age = (0..140).to_a
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+
+example_genders.length.times do |i|
+  santas << Santa.new(example_genders.sample, example_ethnicities.sample, names.sample)
+end
+
+santas.each do |santa|
+  p santa
+end
