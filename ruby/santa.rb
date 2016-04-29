@@ -17,6 +17,13 @@ class Santa
 		# add age attribute that's not passed in on initialization
 		@age = 0
 	end
+	
+	# add attr_reader and attr_writer shortcuts
+	attr_reader :age, :ethnicity, :gender
+	attr_writer :age, :ethnicity, :gender
+
+
+
 	# add a speak method
 	# prints "Ho, ho, ho! Haaaappy holidays!"
 	def speak
@@ -45,46 +52,39 @@ class Santa
  		puts @reindeer_ranking
 	end
 
-	# getter method for age before refactoring
-	def age
-		@age
-	end
+	# # getter method for age before refactoring
+	# def age
+	# 	@age
+	# end
 
-	# getter method for ethnicity before refactoring
-	def ethnicity
-		@ethnicity
-	end
+	# # getter method for ethnicity before refactoring
+	# def ethnicity
+	# 	@ethnicity
+	# end
 
-	# need to define a getter method for gender!!! before refactoring
-	def gender
-    	@gender
-  	end
+	# # need to define a getter method for gender!!! before refactoring
+	# def gender
+ 	#    @gender
+ 	# end
 
-	# add setter method for gender before refactoring
-	def gender=(new_gender)
-		@gender = new_gender
-	end
+	# # add setter method for gender before refactoring
+	# def gender=(new_gender)
+	# 	@gender = new_gender
+	# end
 
-# do i need these setter methods too?
-# getter method for age before refactoring
-	def age
-		@age
-	end
+# # do i need these setter methods too?
+# # getter method for age before refactoring
+# 	def age
+# 		@age
+# 	end
 
-	# getter method for ethnicity before refactoring
-	def ethnicity
-		@ethnicity
-	end
-
-
-
-
-
-
-
+# 	# getter method for ethnicity before refactoring
+# 	def ethnicity
+# 		@ethnicity
+# 	end
 end
 
-
+# DRIVER CODE
 
 santa = Santa.new("female", "black")
 santa.speak
@@ -93,6 +93,21 @@ santa.celebrate_birthday
 santa.get_mad_at("Rudolph")
 santa.gender = "male"
 puts "Santa is now #{santa.gender}!"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # write a program that creates lots of Santas.
