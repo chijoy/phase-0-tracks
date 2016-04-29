@@ -1,20 +1,22 @@
 class TodoList
+ 	def initialize(listitems)
+ 	 @list = listitems
+	end
 
-attr_accessor :get_items
-#Create Initialize Method 
- def initialize (get_items)
- 	@get_items = get_items
- end
-#Create Add Item Method
- def add_item(x)
- 	@get_items.push(x)
- end
-#Delete Add Item Method
- def delete_item(x)
- 	@get_items.delete(x)
- end
-#Retrieves an item by index
- def retrieves_by(x)
- 	@get_items.fetch(x)
- end
+	def get_items
+		@list
+	end
+
+	def add_item(new_item)
+		@list << new_item
+	end
+	def delete_item(item)
+		@list.delete(item)
+	end
+
+	def get_item(index)
+		@list[index]
+	end
+
+
 end
