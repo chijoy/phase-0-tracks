@@ -11,6 +11,9 @@
 
 
 class Robot
+	attr_reader :name, :color
+	attr_accessor :gender
+
 	def initialize(name, gender, color)
 		puts
 		puts "Initialize Robot instance..."
