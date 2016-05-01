@@ -20,7 +20,7 @@ class Robot
 		@name = name
 		@gender = gender
 		@color = color
-	endm
+	end
 
 	def vacuum_floor(room)
 		puts "Please vacuum the #{room} now."
@@ -34,3 +34,17 @@ class Robot
 		puts "Please walk #{dog} now."
 	end
 end
+
+
+# DRIVER CODE
+
+robots = Robot.new("Eve", "female", "pink")
+robots.vacuum_floor("living room")
+robots.mop_floor("living room")
+robots.walk_dog("Murphy")
+
+# add ability to create many instances of Robot class
+robots = []
+names = ["Mr. Roboto", "Hal", "Adam", "Apple", "Siri", "Watson"]
+genders = ["male", "female", "agender"]
+colors = ["white", "grey", "black", "pink", "green", "purple"]
