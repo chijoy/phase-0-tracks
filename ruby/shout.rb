@@ -20,12 +20,12 @@
 # write two classes representing anything that might shout
 
 module Shout
-	def self.yell_happy(happy_words)
-		words + "Yahoo!"
+	def yell_happy(happy_words)
+		puts "#{happy_words}" + "Yahoo!"
 	end
 
-	def self.yell_mad(mad_words)
-		words + "Nooooooooooooooooo!"
+	def yell_mad(mad_words)
+		puts "#{mad_words}" + "Nooooooooooooooooo!"
 	end
 end
 
@@ -40,3 +40,7 @@ end
 # test work
 fans = Fans.new
 fans.yell_happy("Cubs win!")
+
+toddlers = Toddlers.new
+toddlers.yell_mad("Not bed time!")
+
