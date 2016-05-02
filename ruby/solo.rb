@@ -9,7 +9,6 @@
 # 	2. mop floor
 # 	3. walk dogs
 
-
 class Robot
 	attr_reader :model_name, :model_color
 	attr_accessor :model_voice
@@ -33,10 +32,7 @@ class Robot
 	def walk_dog(dog)
 		puts "Please walk #{dog} now."
 	end
-
-
 end
-
 
 # DRIVER CODE
 
@@ -57,14 +53,12 @@ model_colors = ["white", "black"]
 
 puts "How many Robots will you be choosing today?"
 number_of_robots = gets.chomp.to_i
+
 index = 0
-
 while index < number_of_robots
-
 index += 1
 
-
-	puts "-------------------------------------------------"
+	puts 
 	puts "Thank you for choosing us as your Robot resource!"
 	puts
 	puts "Which model would you like? Hal or Siri?"
@@ -95,5 +89,4 @@ index += 1
 	puts "Model: #{model_names.capitalize}"
 	puts "Voice: #{model_voice.capitalize}"
 	puts "Color: #{model_colors.capitalize}"
-
 end
