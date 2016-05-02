@@ -49,56 +49,51 @@ end
 robots = [] # here's an empty array
 model_names = ["Hal", "Siri"] # here are model names
 model_voice = ["British", "American"]
-# model_colors = ["white", "black"]
-p robots
+model_colors = ["white", "black"]
+# p robots
 
-puts "-------------------------------------------------"
-puts "Thank you for choosing us as your Robot resource!"
+# prompt user for attributes and store in array
+# user should be able to create as many nstances as they like
 
-puts "Which model would you like? Hal or Siri?"
-puts "Please enter your choice now."
-reply_model = gets.chomp.downcase
-robots << reply_model.capitalize
-puts "Great! You have chosen #{reply_model.capitalize}."
-p robots
+puts "How many Robots will you be choosing today?"
+number_of_robots = gets.chomp.to_i
+index = 0
 
-puts "Which voice would you like? British or American?"
-puts "Please enter your choice now."
-reply_voice = gets.chomp.downcase
-robots << reply_voice.capitalize
-puts "Great! You have chosen #{reply_voice.capitalize}."
-p robots
+while index < number_of_robots
+
+index += 1
 
 
+	puts "-------------------------------------------------"
+	puts "Thank you for choosing us as your Robot resource!"
+	puts
+	puts "Which model would you like? Hal or Siri?"
+	puts "Please enter your choice now."
+	model_names = gets.chomp.downcase
+	robots << model_names.capitalize
+	puts "Great! You have chosen #{model_names.capitalize}."
+	# p robots
 
-# puts "How many Robots will you be choosing today?"
-# # number_of_robots = gets.chomp.to_i
-# # index = 0
+	puts
+	puts "Which voice would you like? British or American?"
+	puts "Please enter your choice now."
+	model_voice = gets.chomp.downcase
+	robots << model_voice.capitalize
+	puts "Great! You have chosen #{model_voice.capitalize}."
+	# p robots
 
-# # while index < number_of_robots
+	puts
+	puts "Which color would you like? White or Black?"
+	puts "Please enter your choice now."
+	model_colors = gets.chomp.downcase
+	robots << model_colors.capitalize
+	puts "Great! You have chosen #{model_colors.capitalize}."
+	# p robots
+	puts
+	puts "Congratulations on your new Robot!"
+	puts "You have chosen:"
+	puts "Model: #{model_names.capitalize}"
+	puts "Voice: #{model_voice.capitalize}"
+	puts "Color: #{model_colors.capitalize}"
 
-# # index += 1
-
-# 	puts "Which model would you like?"
-# 	puts "Your choices are: Mr. Roboto, Hal, Apple, Siri, or Watson."
-
-# 	model_name = gets.chomp.downcase
-
-
-# 	puts
-# 	puts "Which voice would you like?"
-# 	puts "Your options are: British, American, Irish, French, or Italian."
-# 	puts "Please enter your choice now."
-# 	model_voice = gets.chomp.downcase
-# 	puts "Thank you! You have chosen #{model_voice.capitalize}."
-# 	puts
-# 	puts "Which color would you like?"
-# 	puts "Your options are: white, grey, black, pink, green, or purple."
-# 	puts "Please enter your choice now."
-# 	model_color = gets.chomp.downcase
-# 	puts "Thanks! You have chosen #{model_color}."
-# 	puts
-# 	puts "Congratulations on your new Robot!"
-
-# 	p robot
-# # end
+end
