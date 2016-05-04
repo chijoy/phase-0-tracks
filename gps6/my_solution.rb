@@ -17,13 +17,14 @@ class VirusPredictor
   end
 
   def virus_effects
-    predicted_deaths(@population_density, @population, @state)
-    speed_of_spread(@population_density, @state)
+    predicted_deaths
+    speed_of_spread
+
   end
 
   private
 
-  def predicted_deaths(population_density, population, state)
+  def predicted_deaths
     # predicted deaths is solely based on population density
     if @population_density >= 200
       number_of_deaths = (@population * 0.4).floor
@@ -41,7 +42,7 @@ class VirusPredictor
 
   end
 
-  def speed_of_spread(population_density, state) #in months
+  def speed_of_spread #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
     speed = 0.0
@@ -83,7 +84,7 @@ alaska.virus_effects
 
 def print_list
   STATE_DATA.each do |state, population_data|
-    state = VirusPredictor.new(state, population_data[:population_density][:population])
+    state = VirusPredictor.new(state, population_data[:population_density], population_data[:population])
     state.virus_effects
   end
 
@@ -92,4 +93,38 @@ end
 print_list
 
 #=======================================================================
+
+
 # Reflection Section
+
+# What are the differences between the two different hash syntaxes shown in the state_data file?
+# The first hash is for STATE_DATA and is the overall hash. I call it the house hash,
+# because I think that's either the first hash we learned, or we've gone over it a few times.
+# It's the all encompassing hash.
+# The second hash is the value of the key value combo in the STATE_DATA hash. 
+
+# What does require_relative do? How is it different from require?
+# Require relative basically takes everything from the state_data.rb file, 
+# and putting it into this file on line 10, so that you can refer to all that data
+# It's a file that is relative to where you're at
+# It's different from relative in that is an absolute location.
+
+# What are some ways to iterate through a hash?
+# You can use .each and .map
+
+# When refactoring virus_effects, what stood out to you about the variables, if anything?
+# It was obvious right away that they were duplicated, but without help, I didn't realize that
+# you didn't have to call those attributes out, since they're class attributes that are set
+# for the whole class
+
+# What concept did you most solidify in this challenge?
+# using require_relative
+
+
+
+
+
+
+
+
+
