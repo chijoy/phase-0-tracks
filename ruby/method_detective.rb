@@ -5,19 +5,19 @@
 # committed the crime, add additional calls to prove it.
 
 
-# “iNvEsTiGaTiOn”.<???>
 # => “InVeStIgAtIoN”
 # use a method that changes the case of the string
 # use .swapcase
 
 "iNvEsTiGaTiOn".swapcase
 
-# “zom”.<???>
+# "zom".<???>
 # => “zoom”
 # use a method that inserts a character at a certain index point
 # use .insert
 
 "zom".insert(1, "o")
+
 
 # “enhance”.<???>
 # => “    enhance    ”
@@ -71,6 +71,30 @@ str.prepend("the usual")
 "Elementary  ,    my   dear      Watson!".squeeze
 
 # “z”.ord
+
+# "enhance".<???>
+# => "    enhance    "
+
+# "Stop! You’re under arrest!".<???>
+# => "STOP! YOU’RE UNDER ARREST!"
+
+# "the usual".<???>
+#=> "the usual suspects"
+
+# " suspects".<???>
+# => "the usual suspects"
+
+# "The case of the disappearing last letter".<???>
+# => "The case of the disappearing last lette"
+
+# "The mystery of the missing first letter".<???>
+# => "he mystery of the missing first letter"
+
+# "Elementary,    my   dear        Watson!".<???>
+# => "Elementary, my dear Watson!"
+
+# "z".<???>
+
 # => 122 
 # (What is the significance of the number 122 in relation to the character z? 
 # I had to google 'ordinal number' 
@@ -81,9 +105,14 @@ str.prepend("the usual")
 
 "z".ord
 
+
 #“How many times does the letter ‘a’ appear in this string?”.<???>
 #=> 4
 # find a method that will count the number of times "a" appears in the string.
 # use .count with the letter "a" specified
 
 "How many times does the letter ‘a’ appear in this string?".count("a")
+
+# "How many times does the letter 'a' appear in this string?".<???>
+# => 4
+
