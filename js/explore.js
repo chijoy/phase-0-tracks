@@ -17,7 +17,6 @@ for (i = string.lenth -1; i >= 0; i --) {
 	reversedString += string[i]
 }
 
-
 console.log(reversedString)
 
 function reverse(string) {
@@ -31,7 +30,7 @@ function reverse(string) {
 // DRIVER CODE
 
 var testString = reverse("hello");
-var testString = reverse("hi");
+// var testString = reverse("hi");
 
 if (testString.length > 3) {
 	console.log(testString);
