@@ -34,9 +34,7 @@ function findKeyValueMatch(object1, object2){
 			key2 = key + " = " + object2[key];
 			if (key1 == key2) {
 				var found = true;
-			} else {
-
-				console.log(key1 + " =" + key2 + " true")
+		} else {}
 			}
 		}
 	}
@@ -46,7 +44,32 @@ return found;
 // driver code
 console.log(findKeyValueMatch({name: "Steven", age: 54, name: "Tamir", age: 54}))
 console.log(findKeyValueMatch({name: "Fluffy", age: 2, name: "Spot", age: 7}))
+// I can't figure out why these are both coming out false...
 
 
+
+// write a function that takes an integer for length
+// builds an array
+// returns an array of 3 random words back
+
+// function generateRandom(string){
+//   var times = 0;
+//   var array = [];
+
+//   while (times < string) {
+//     var alphabet = "abcdefghijklmnopqrstuvwxyz".split('')
+//     var newWord = [];
+//     randomLength = Math.floor((Math.random() * 10) + 1);
+//       for (i = 0; i < randomLength; i++) {
+//         randomLetter = Math.floor((Math.random() * 25) + 1);
+//         newWord.push(alphabet[randomLetter])
+//       }
+//         var randomWord = newWord.join('');
+//         array.push(randomWord)
+//   times++}
+//     return array
+// }
+
+// // driver code
 
 
