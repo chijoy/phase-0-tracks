@@ -1,0 +1,47 @@
+solo_project :> sqlite3 departments
+SQLite version 3.8.10.2 2015-05-20 18:17:19
+Enter ".help" for usage hints.
+sqlite> SELECT * FROM departments;
+1|Sales
+2|Development
+sqlite> 
+
+sqlite> SELECT * FROM employees;
+1|Jim Shoe|45|False|1
+2|Joe Coder|26|True|2
+3|Michael Scott|35|False|1
+4|Dwight Schrute|32|False|1
+sqlite> UPDATE employees SET knows_ruby="True" WHERE name="Dwight Schrute";
+sqlite> SELECT * FROM employees;
+1|Jim Shoe|45|False|1
+2|Joe Coder|26|True|2
+3|Michael Scott|35|False|1
+4|Dwight Schrute|32|True|1
+sqlite> 
+
+sqlite> SELECT * FROM employees, departments WHERE employees.department_id = departments.id;
+1|Jim Shoe|45|False|1|1|Sales
+2|Joe Coder|26|True|2|2|Development
+3|Michael Scott|35|False|1|1|Sales
+4|Dwight Schrute|32|True|1|1|Sales
+sqlite> 
+
+sqlite> SELECT employees.name, departments.department FROM employees JOIN departments ON employees.department_id = departments.id;
+Jim Shoe|Sales
+Joe Coder|Development
+Michael Scott|Sales
+Dwight Schrute|Sales
+
+sqlite> DELETE FROM employees WHERE name="Joe Coder";
+sqlite> SELECT employees.name, departments.department FROM employees JOIN departments ON employees.department_id = departments.id;
+Jim Shoe|Sales
+Michael Scott|Sales
+Dwight Schrute|Sales
+sqlite> 
+
+sqlite> SELECT employees.name FROM employees INNER JOIN departments ON employees.department_id = departments.id;
+Jim Shoe
+Michael Scott
+Dwight Schrute
+sqlite> 
+# I don't know what else I can join on, since the departments table only has the department name...
