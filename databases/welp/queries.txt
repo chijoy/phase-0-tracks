@@ -1,0 +1,10 @@
+SELECT users.user_name, businesses.business_name, reviews.stars, reviews.comment FROM businesses INNER JOIN reviews ON businesses.id = reviews.business_id INNER JOIN users ON businesses.id = users.id;
+Richard Hendricks|Trader Moes|4|Great food!
+Erich Bachman|Whole Fruits|2|The fruit is fresh!
+Gavin Belson|Mangianis|5|I love Italian!
+Richard Hendricks|Trader Moes|5|Awesome!
+Gavin Belson|Mangianis|5|Highly recommend!
+
+SELECT users.user_name, businesses.business_name, reviews.stars, reviews.comment FROM businesses INNER JOIN reviews ON businesses.id = reviews.business_id INNER JOIN users ON businesses.id = users.id WHERE businesses.business_name="Trader Moes";
+Richard Hendricks|Trader Moes|4|Great food!
+Richard Hendricks|Trader Moes|5|Awesome!
