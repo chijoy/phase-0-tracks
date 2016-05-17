@@ -1,4 +1,4 @@
-# What are some of the key design philosophies of the Linus operating system?
+# What are some of the key design philosophies of the Linuxrm operating system?
 
 * Linux is open source software, is easy to use and is feature-rich.
 * It assumes you know what you are doing and allows you to do anything you tell it to. Whether unintentionally bad or not. 
