@@ -1,7 +1,10 @@
+console.log("The script is running!");
 
-function changefontcolor(event) {
-  event.style.color = 'white';
+function addBorder(event) {
+console.log("click happened!:");
+console.log(event);
+event.target.style.border = "3px solid black"
 }
 
-var button = document.getElementById('button');
-button.addEventListener("click", changefontcolor);
+var photo = document.getElementById("my_three_dogs");
+photo.addEventListener("click", addBorder);
